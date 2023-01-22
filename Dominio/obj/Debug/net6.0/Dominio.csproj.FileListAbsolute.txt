@@ -1,0 +1,12 @@
+C:\Users\repos\ApiLoginUsuario\Dominio\bin\Debug\net6.0\Dominio.deps.json
+C:\Users\repos\ApiLoginUsuario\Dominio\bin\Debug\net6.0\Dominio.dll
+C:\Users\repos\ApiLoginUsuario\Dominio\bin\Debug\net6.0\Dominio.pdb
+C:\Users\repos\ApiLoginUsuario\Dominio\obj\Debug\net6.0\Dominio.csproj.AssemblyReference.cache
+C:\Users\repos\ApiLoginUsuario\Dominio\obj\Debug\net6.0\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\repos\ApiLoginUsuario\Dominio\obj\Debug\net6.0\Dominio.AssemblyInfoInputs.cache
+C:\Users\repos\ApiLoginUsuario\Dominio\obj\Debug\net6.0\Dominio.AssemblyInfo.cs
+C:\Users\repos\ApiLoginUsuario\Dominio\obj\Debug\net6.0\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\repos\ApiLoginUsuario\Dominio\obj\Debug\net6.0\Dominio.dll
+C:\Users\repos\ApiLoginUsuario\Dominio\obj\Debug\net6.0\refint\Dominio.dll
+C:\Users\repos\ApiLoginUsuario\Dominio\obj\Debug\net6.0\Dominio.pdb
+C:\Users\repos\ApiLoginUsuario\Dominio\obj\Debug\net6.0\ref\Dominio.dll

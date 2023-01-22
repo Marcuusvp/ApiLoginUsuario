@@ -1,0 +1,15 @@
+C:\Users\repos\ApiLoginUsuario\Repositorio\bin\Debug\net6.0\Repositorio.deps.json
+C:\Users\repos\ApiLoginUsuario\Repositorio\bin\Debug\net6.0\Repositorio.dll
+C:\Users\repos\ApiLoginUsuario\Repositorio\bin\Debug\net6.0\Repositorio.pdb
+C:\Users\repos\ApiLoginUsuario\Repositorio\bin\Debug\net6.0\Dominio.dll
+C:\Users\repos\ApiLoginUsuario\Repositorio\bin\Debug\net6.0\Dominio.pdb
+C:\Users\repos\ApiLoginUsuario\Repositorio\obj\Debug\net6.0\Repositorio.csproj.AssemblyReference.cache
+C:\Users\repos\ApiLoginUsuario\Repositorio\obj\Debug\net6.0\Repositorio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\repos\ApiLoginUsuario\Repositorio\obj\Debug\net6.0\Repositorio.AssemblyInfoInputs.cache
+C:\Users\repos\ApiLoginUsuario\Repositorio\obj\Debug\net6.0\Repositorio.AssemblyInfo.cs
+C:\Users\repos\ApiLoginUsuario\Repositorio\obj\Debug\net6.0\Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\repos\ApiLoginUsuario\Repositorio\obj\Debug\net6.0\Repositorio.csproj.CopyComplete
+C:\Users\repos\ApiLoginUsuario\Repositorio\obj\Debug\net6.0\Repositorio.dll
+C:\Users\repos\ApiLoginUsuario\Repositorio\obj\Debug\net6.0\refint\Repositorio.dll
+C:\Users\repos\ApiLoginUsuario\Repositorio\obj\Debug\net6.0\Repositorio.pdb
+C:\Users\repos\ApiLoginUsuario\Repositorio\obj\Debug\net6.0\ref\Repositorio.dll
