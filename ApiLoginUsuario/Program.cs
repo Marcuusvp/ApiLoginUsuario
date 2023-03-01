@@ -2,6 +2,7 @@ using Aplicacao.Interfaces;
 using Aplicacao.Services;
 using Dominio.Mensagem;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
@@ -11,12 +12,20 @@ using Repositorio.Repositories;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-var tokenDecriptor = builder.Configuration["Secrets:TokenKey"];
 // Add services to the container.
 builder.Configuration.AddUserSecrets<Program>();
+builder.Configuration.AddKeyPerFile(directoryPath: "/run/secrets", optional: true);
 builder.Services.AddControllers();
 builder.Services.AddSingleton<ConexaoBanco>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.Configure<ApiBehaviorOptions>(options => { options.SuppressModelStateInvalidFilter = true; });
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy", builder => builder
+        .AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader());
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -52,6 +61,8 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddTransient<IEmailService, EmailService>();
+var tokenDecriptor = builder.Configuration["Secrets:TokenKey"];
+Console.WriteLine(tokenDecriptor);
 var key = Encoding.ASCII.GetBytes(tokenDecriptor);
 builder.Services.AddAuthentication(x =>
 {
@@ -75,13 +86,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseHttpsRedirection();
+
 
 app.UseAuthentication();
 
 app.UseAuthorization();
+app.UseCors("CorsPolicy");
 
 app.MapControllers();
+
 
 app.Run();

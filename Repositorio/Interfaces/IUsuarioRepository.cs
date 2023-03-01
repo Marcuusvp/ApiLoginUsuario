@@ -8,5 +8,6 @@ namespace Repositorio.Interfaces
         Task<bool> AddNewUser(Usuario user);
         Task<Usuario> GetUser(Usuario user);
         Task<IEnumerable<Permissoes>> GetRoles(Usuario user);
+        Task<bool> SetNewPassword(string novaSenha, string email);
     }
 }

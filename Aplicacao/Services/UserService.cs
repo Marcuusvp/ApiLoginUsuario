@@ -73,5 +73,24 @@ namespace Aplicacao.Services
             }
 
         }
+        public async Task<bool> AlterarSenha(AlteraSenhaUsuarioDto usuario)
+        {
+            var user = _mapper.Map<Usuario>(usuario);
+            var usuarioSolicitado = await _userRepository.GetUser(user);
+            if (usuarioSolicitado == null)
+            {
+                _mensagem.AdicionaErro("Usuário inválido");
+                return false;
+            }
+            var newPassword = PasswordGenerator.Generate(25);
+            var newHash = PasswordHasher.Hash(newPassword);
+            await _userRepository.SetNewPassword(newHash, user.Email);
+            _emailService.Send(
+                    user.UserName,
+                    user.Email,
+                    "ALTERAÇÃO DE SENHA",
+                    $"Sua nova senha é <strong>{newPassword}</strong>");
+            return true;
+        }
     }
 }

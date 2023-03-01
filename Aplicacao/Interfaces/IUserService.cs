@@ -1,9 +1,4 @@
 ﻿using Aplicacao.Dtos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aplicacao.Interfaces
 {
@@ -11,5 +6,7 @@ namespace Aplicacao.Interfaces
     {
         Task<bool> CreateUser(NovoUsuarioDto usuario);
         Task<LoginDto> UserLogin(UsuarioDto usuario);
+        Task<bool> AlterarSenha(AlteraSenhaUsuarioDto usuario);
     }
 }
+ 

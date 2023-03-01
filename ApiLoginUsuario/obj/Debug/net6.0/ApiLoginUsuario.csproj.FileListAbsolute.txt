@@ -10,6 +10,8 @@ C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\bin\Debug\net6.0\AutoMapper.Exten
 C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\bin\Debug\net6.0\Dapper.dll
 C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\bin\Debug\net6.0\Microsoft.Extensions.Configuration.KeyPerFile.dll
+C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\bin\Debug\net6.0\Microsoft.Extensions.Configuration.UserSecrets.dll
 C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll

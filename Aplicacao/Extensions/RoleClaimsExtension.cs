@@ -14,7 +14,7 @@ namespace Aplicacao.Extensions
         {
             var result = new List<Claim>
             {
-                new(ClaimTypes.Name, user.Email)
+                new(ClaimTypes.Name, user.UserName)
             };
             result.AddRange(
                 user.Permissoes.Select(role => new Claim(ClaimTypes.Role, role.Nome)));
