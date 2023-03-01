@@ -92,5 +92,30 @@ namespace Aplicacao.Services
                     $"Sua nova senha é <strong>{newPassword}</strong>");
             return true;
         }
+        public async Task<bool> MudarSenha(MudarSenhaUsuarioDto usuario)
+        {
+            var user = _mapper.Map<Usuario>(usuario);
+            var usuarioSolicitado = await _userRepository.GetUser(user);
+            if (usuarioSolicitado == null)
+            {
+                _mensagem.AdicionaErro("Usuário inválido");
+                return false;
+            }
+            if (PasswordHasher.Verify(usuarioSolicitado.PasswordHash, usuario.Password))
+            {
+                var newHash = PasswordHasher.Hash(usuario.NewPassword);
+                var novaSenha = await _userRepository.SetNewPassword(newHash, usuario.Email);
+                _emailService.Send(
+                    user.UserName,
+                    user.Email,
+                    "Você definiu sua senha para",
+                    $"Sua nova senha é <strong>{usuario.NewPassword}</strong>");
+                return novaSenha;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

@@ -7,6 +7,7 @@ namespace Aplicacao.Interfaces
         Task<bool> CreateUser(NovoUsuarioDto usuario);
         Task<LoginDto> UserLogin(UsuarioDto usuario);
         Task<bool> AlterarSenha(AlteraSenhaUsuarioDto usuario);
+        Task<bool> MudarSenha(MudarSenhaUsuarioDto usuario);
     }
 }
  

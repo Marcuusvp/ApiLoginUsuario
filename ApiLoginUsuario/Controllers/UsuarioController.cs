@@ -36,10 +36,17 @@ namespace ApiLoginUsuario.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("/alterar-senha")]
+        [HttpPost("/esqueceu-senha")]
         public async Task<IActionResult> AlterarSenha([FromBody]AlteraSenhaUsuarioDto usuario)
         {
             var resultado = await _userService.AlterarSenha(usuario);
+            return GerarRetorno(resultado);
+        }
+        [AllowAnonymous]
+        [HttpPost("/alterar-senha")]
+        public async Task<IActionResult> MudarSenha([FromBody]MudarSenhaUsuarioDto usuario)
+        {
+            var resultado = await _userService.MudarSenha(usuario);
             return GerarRetorno(resultado);
         }
     }

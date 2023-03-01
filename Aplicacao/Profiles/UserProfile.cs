@@ -18,6 +18,7 @@ namespace Aplicacao.Profiles
                 .ForMember(dest => dest.PasswordHash,
                 opt => opt.MapFrom(src => src.Password));
             CreateMap<AlteraSenhaUsuarioDto, Usuario>();
+            CreateMap<MudarSenhaUsuarioDto, Usuario>();
         }
     }
 }
