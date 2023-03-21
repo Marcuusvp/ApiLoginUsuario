@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -19,7 +20,7 @@ namespace Repositorio.Repositories
 
         public IDbConnection Conectar
         {
-            get { return new SqlConnection(_conexaoB); }
+            get { return new NpgsqlConnection(_conexaoB); }
         }
     }
 }
