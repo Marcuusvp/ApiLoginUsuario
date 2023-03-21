@@ -62,7 +62,6 @@ builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddTransient<IEmailService, EmailService>();
 var tokenDecriptor = builder.Configuration["Secrets:TokenKey"];
-Console.WriteLine(tokenDecriptor);
 var key = Encoding.ASCII.GetBytes(tokenDecriptor);
 builder.Services.AddAuthentication(x =>
 {
