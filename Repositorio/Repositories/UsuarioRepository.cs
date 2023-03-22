@@ -19,7 +19,7 @@ namespace Repositorio.Repositories
             param.Add("@USERNAME", user.UserName, DbType.String);
             param.Add("@EMAIL", user.Email, DbType.String);
             param.Add("@PASSWORDHASH", user.PasswordHash, DbType.String);
-            var query = @"INSERT INTO USUARIOS VALUES (@USERNAME, @EMAIL, @PASSWORDHASH)";
+            var query = @"INSERT INTO USUARIOS (USERNAME, EMAIL, PASSWORDHASH) VALUES (@USERNAME, @EMAIL, @PASSWORDHASH)";
             var resultado = await sql.ExecuteAsync(query, param);
             return resultado > 0;
         }
