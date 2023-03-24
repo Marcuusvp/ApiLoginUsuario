@@ -91,6 +91,7 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors("CorsPolicy");
 app.UseRouting();
 
 app.UseAuthentication();
@@ -98,7 +99,6 @@ app.UseAuthorization();
 
 app.UseHttpsRedirection();
 
-app.UseCors("CorsPolicy");
 
 app.MapControllers();
 
