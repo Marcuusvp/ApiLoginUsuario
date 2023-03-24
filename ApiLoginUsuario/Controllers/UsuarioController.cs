@@ -18,7 +18,7 @@ namespace ApiLoginUsuario.Controllers
             _mensagem = mensagem;
         }
 
-        [Authorize(Roles = "GERENTE")]
+        [AllowAnonymous]
         [HttpPost]
         [Route("/cadastrar")]        
         public async Task<IActionResult> CreateNewUser([FromBody]NovoUsuarioDto usuario)
