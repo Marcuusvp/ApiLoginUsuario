@@ -16,7 +16,7 @@ namespace ApiLoginUsuario.Controllers
             _cidadeService = cidadeService;
         }
 
-        [AllowAnonymous]
+        [Authorize(Roles = "ATENDENTE")]
         [HttpPost]
         [Route("/cadastrar-cidade")]
         public async Task<IActionResult> CreateNovaCidade([FromBody] NovaCidadeDto cidade)
@@ -24,7 +24,8 @@ namespace ApiLoginUsuario.Controllers
             var resultado = await _cidadeService.CreateCidade(cidade);
             return GerarRetorno(resultado);
         }
-        [AllowAnonymous]
+
+        [Authorize(Roles = "ATENDENTE")]
         [HttpGet]
         [Route("/listar-cidades")]
         public async Task<IActionResult> GetAllCidades(int _page = 1, int _limit = 10, string nome_like = "")
@@ -34,7 +35,7 @@ namespace ApiLoginUsuario.Controllers
             return GerarRetorno(resultado.Data);
         }
 
-        [AllowAnonymous]
+        [Authorize(Roles = "ATENDENTE")]
         [HttpGet]
         [Route("/cidade-por-id/{id}")]
         public async Task<IActionResult> GetCidadePorId(int id)
@@ -42,7 +43,8 @@ namespace ApiLoginUsuario.Controllers
             var resultado = await _cidadeService.ListarCidadePorId(id);
             return GerarRetorno(resultado);
         }
-        [AllowAnonymous]
+
+        [Authorize(Roles = "ATENDENTE")]
         [HttpPut]
         [Route("/atualizar-cidade/{id}")]
         public async Task<IActionResult> UpdatePessoa(int id, [FromBody]NovaCidadeDto cidade)
@@ -50,7 +52,8 @@ namespace ApiLoginUsuario.Controllers
             var resultado = await _cidadeService.AtualizarCidade(id, cidade);
             return GerarRetorno(resultado);
         }
-        [AllowAnonymous]
+
+        [Authorize(Roles = "ATENDENTE")]
         [HttpDelete]
         [Route("/deletar-cidade/{id}")]
         public async Task<IActionResult> DeleteCidadePorId(int id)

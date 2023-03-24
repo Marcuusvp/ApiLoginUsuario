@@ -17,8 +17,7 @@ namespace ApiLoginUsuario.Controllers
             _pessoaService = pessoaService;
         }
 
-        //[Authorize(Roles = "GERENTE")]
-        [AllowAnonymous]
+        [Authorize(Roles = "ATENDENTE")]
         [HttpPost]
         [Route("/cadastrar-pessoa")]
         public async Task<IActionResult> CreateNovaPessoa([FromBody] NovaPessoaDto pessoa)
@@ -27,7 +26,7 @@ namespace ApiLoginUsuario.Controllers
             return GerarRetorno(resultado);
         }
 
-        [AllowAnonymous]
+        [Authorize(Roles = "ATENDENTE")]
         [HttpGet]
         [Route("/listar-pessoas")]
         public async Task<IActionResult> GetAllPessoas(int _page = 1, int _limit = 10, string nomeCompleto_like = "")
@@ -37,7 +36,7 @@ namespace ApiLoginUsuario.Controllers
             return GerarRetorno(resultado.Data);
         }
 
-        [AllowAnonymous]
+        [Authorize(Roles = "ATENDENTE")]
         [HttpGet]
         [Route("/pessoa-por-id/{id}")]
         public async Task<IActionResult> GetPessoaById(int id)
@@ -45,7 +44,8 @@ namespace ApiLoginUsuario.Controllers
             var resultado = await _pessoaService.ListarPessoaPorId(id);
             return GerarRetorno(resultado);
         }
-        [AllowAnonymous]
+
+        [Authorize(Roles = "ATENDENTE")]
         [HttpPut]
         [Route("/atualizar-pessoa/{id}")]
         public async Task<IActionResult> UpdatePessoa(int id, [FromBody]NovaPessoaDto pessoa)
@@ -53,7 +53,8 @@ namespace ApiLoginUsuario.Controllers
             var resultado = await _pessoaService.AtualizarPessoa(id, pessoa);
             return GerarRetorno(resultado);
         }
-        [AllowAnonymous]
+
+        [Authorize(Roles = "ATENDENTE")]
         [HttpDelete]
         [Route("/deletar-pessoa/{id}")]
         public async Task<IActionResult> DeletePessoaPorId(int id)
