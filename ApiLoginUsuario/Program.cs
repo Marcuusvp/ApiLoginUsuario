@@ -24,7 +24,8 @@ builder.Services.AddCors(options =>
     options.AddPolicy("CorsPolicy", builder => builder
         .AllowAnyOrigin()
         .AllowAnyMethod()
-        .AllowAnyHeader());
+        .AllowAnyHeader()
+        .WithExposedHeaders("x-total-count"));
 });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -60,6 +61,10 @@ builder.Services.AddScoped<IMensagem, Mensagem>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IPessoaService, PessoaService>();
+builder.Services.AddScoped<IPessoaRepository, PessoaRepository>();
+builder.Services.AddScoped<ICidadeService, CidadeService>();
+builder.Services.AddScoped<ICidadeRepository, CidadeRepository>();
 builder.Services.AddTransient<IEmailService, EmailService>();
 var tokenDecriptor = builder.Configuration["Secrets:TokenKey"];
 var key = Encoding.ASCII.GetBytes(tokenDecriptor);

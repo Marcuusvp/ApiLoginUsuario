@@ -52,3 +52,4 @@ C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\obj\Debug\net6.0\refint\ApiLoginU
 C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\obj\Debug\net6.0\ApiLoginUsuario.pdb
 C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\obj\Debug\net6.0\ApiLoginUsuario.genruntimeconfig.cache
 C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\obj\Debug\net6.0\ref\ApiLoginUsuario.dll
+C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\bin\Debug\net6.0\Npgsql.dll

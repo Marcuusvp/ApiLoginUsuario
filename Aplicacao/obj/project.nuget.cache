@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "htVfxXdgvyEZnEJq1wmhvz939UTNHzvyEOWghPjICD43NdjDwz8D8dqdctx8GWbfrdNvdu3vxpFbLmWt8zY6Jw==",
+  "dgSpecHash": "5N/jZC7GQE3/agrPk/io0wYDEnqSi0w0AGCta1CB/u2jldrT8YMisZl8zdRP4ydj6k2NFcQEPMkwfWz9jC6rsA==",
   "success": true,
   "projectFilePath": "C:\\Users\\repos\\ApiLoginUsuario\\Aplicacao\\Aplicacao.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,7 @@
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\6.0.0\\microsoft.extensions.fileproviders.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\6.0.0\\microsoft.extensions.fileproviders.physical.6.0.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\6.0.0\\microsoft.extensions.filesystemglobbing.6.0.0.nupkg.sha512",
+    "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.26.0\\microsoft.identitymodel.abstractions.6.26.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.26.0\\microsoft.identitymodel.jsonwebtokens.6.26.0.nupkg.sha512",
@@ -24,6 +25,7 @@
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Marcus\\.nuget\\packages\\npgsql\\7.0.2\\npgsql.7.0.2.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
