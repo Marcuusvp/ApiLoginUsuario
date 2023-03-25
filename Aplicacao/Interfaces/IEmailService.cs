@@ -14,6 +14,6 @@ namespace Aplicacao.Interfaces
             string subject,
             string body,
             string fromName = "Equipe API marquinhos",
-            string fromEmail = "hortaemcasa2017@gmail.com");
+            string fromEmail = "marcusvpdev@gmail.com");
     }
 }
