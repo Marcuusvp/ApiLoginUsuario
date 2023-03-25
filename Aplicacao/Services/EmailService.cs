@@ -17,7 +17,7 @@ namespace Aplicacao.Services
             string toEmail,
             string subject,
             string body,
-            string fromName = "Equipe API marquinhos",
+            string fromName = "Equipe Full-Stack",
             string fromEmail = "marcusvpdev@gmail.com")
         {
             var smtpClient = new SmtpClient(_configuration["Smtp:Host"], int.Parse(_configuration["Smtp:Port"]));

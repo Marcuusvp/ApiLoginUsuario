@@ -13,7 +13,7 @@ namespace Aplicacao.Interfaces
             string toEmail,
             string subject,
             string body,
-            string fromName = "Equipe API marquinhos",
+            string fromName = "Equipe Full-Stack",
             string fromEmail = "marcusvpdev@gmail.com");
     }
 }
