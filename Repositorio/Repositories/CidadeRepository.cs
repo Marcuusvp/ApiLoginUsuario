@@ -23,7 +23,8 @@ namespace Repositorio.Repositories
             using IDbConnection sql = _conexao.Conectar;
             var param = new DynamicParameters();
             param.Add("@Nome", cidade.Nome, DbType.String);
-            var query = @"INSERT INTO CIDADES (NOME) VALUES (@Nome)";
+            param.Add("@ImagemUrl", cidade.ImagemUrl, DbType.String);
+            var query = @"INSERT INTO CIDADES (NOME, IMAGEM_URL) VALUES (@Nome, @ImagemUrl)";
             var resultado = await sql.ExecuteAsync(query, param);
             return resultado > 0;
         }
@@ -33,7 +34,8 @@ namespace Repositorio.Repositories
             using IDbConnection sql = _conexao.Conectar;
             var param = new DynamicParameters();
             var query = @"SELECT ID as ""Id""
-                        , NOME as ""Nome""                        
+                        , NOME as ""Nome""  
+                        , IMAGEM_URL as ""ImagemUrl""
                         FROM CIDADES";
             var resultado = await sql.QueryAsync<Cidade>(query, param);
             return resultado;
@@ -46,6 +48,7 @@ namespace Repositorio.Repositories
             param.Add("@Id", id, DbType.Int32);
             var query = @"SELECT ID as ""Id""
                         , NOME as ""Nome""
+                        , IMAGEM_URL as ""ImagemUrl""
                         FROM CIDADES
                         WHERE ID = @Id";
             var resultado = await sql.QueryFirstOrDefaultAsync<Cidade>(query, param);
@@ -58,8 +61,10 @@ namespace Repositorio.Repositories
             var param = new DynamicParameters();
             param.Add("@Id", id, DbType.Int32);
             param.Add("@Nome", cidade.Nome, DbType.String);
+            param.Add("@ImagemUrl", cidade.ImagemUrl, DbType.String);
             var query = @"UPDATE CIDADES
-                            SET NOME = @Nome
+                            SET NOME = @Nome,
+                            IMAGEM_URL = @ImagemUrl
                             WHERE ID = @Id";
             var resultado = await sql.ExecuteAsync(query, param);
             return resultado > 0;

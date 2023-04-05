@@ -4,12 +4,6 @@ using AutoMapper;
 using Dominio.Mensagem;
 using Dominio.Models;
 using Repositorio.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aplicacao.Services
 {
@@ -18,15 +12,21 @@ namespace Aplicacao.Services
         private readonly ICidadeRepository _cidadeRepository;
         private readonly IMapper _mapper;
         private readonly IMensagem _mensagem;
-        public CidadeService(IMapper mapper, IMensagem mensagem, ICidadeRepository cidadeRepository)
+        private readonly IImagemService _imagemService;
+        public CidadeService(IMapper mapper, IMensagem mensagem, ICidadeRepository cidadeRepository, IImagemService imagemService)
         {
             _mapper = mapper;
             _mensagem = mensagem;
             _cidadeRepository = cidadeRepository;
+            _imagemService = imagemService;
         }
 
         public async Task<bool> CreateCidade (NovaCidadeDto cidade)
         {
+            if (cidade.Imagem != null)
+            {
+                cidade.ImagemUrl = await _imagemService.UploadImageAsync(cidade.Imagem);
+            }
             var cidadeNova = _mapper.Map<Cidade>(cidade);
             return await _cidadeRepository.AddCidade(cidadeNova);
         }
@@ -47,9 +47,6 @@ namespace Aplicacao.Services
             return (mappedResult, totalCount);
         }
 
-
-
-
         public async Task<CidadeDto> ListarCidadePorId(int id)
         {
             var resultado = await _cidadeRepository.GetCidadeById(id);
@@ -61,11 +58,30 @@ namespace Aplicacao.Services
             return _mapper.Map<CidadeDto>(resultado);
         }
 
-        public async Task<bool> AtualizarCidade(int id, NovaCidadeDto pessoa)
+        public async Task<bool> AtualizarCidade(int id, NovaCidadeDto cidadeDto)
         {
-            var pessoaMapeada = _mapper.Map<Cidade>(pessoa);
-            return await _cidadeRepository.UpdateCidade(id, pessoaMapeada);
+            var cidadeExistente = await _cidadeRepository.GetCidadeById(id);
+
+            if (cidadeExistente == null)
+            {
+                _mensagem.AdicionaErro("Cidade não encontrada");
+                return false;
+            }
+
+            if (cidadeDto.Imagem != null)
+            {
+                cidadeDto.ImagemUrl = await _imagemService.UploadImageAsync(cidadeDto.Imagem);
+            }
+
+            var cidadeAtualizada = _mapper.Map<Cidade>(cidadeDto);
+
+            // Copie as propriedades de cidadeAtualizada para cidadeExistente
+            cidadeExistente.Nome = cidadeAtualizada.Nome;
+            cidadeExistente.ImagemUrl = cidadeAtualizada.ImagemUrl ?? cidadeExistente.ImagemUrl;
+
+            return await _cidadeRepository.UpdateCidade(id, cidadeExistente);
         }
+
 
         public async Task<bool> DeletarCidadeId(int id)
         {

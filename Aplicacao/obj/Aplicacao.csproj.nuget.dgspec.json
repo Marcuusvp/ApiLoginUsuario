@@ -55,6 +55,14 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "Imgur.API": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
             "Microsoft.Extensions.Configuration.KeyPerFile": {
               "target": "Package",
               "version": "[6.0.13, )"
@@ -62,6 +70,14 @@
             "Microsoft.Extensions.Configuration.UserSecrets": {
               "target": "Package",
               "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Npgsql": {
               "target": "Package",
@@ -135,6 +151,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Imgur.API": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
             "Microsoft.Extensions.Configuration.KeyPerFile": {
               "target": "Package",
               "version": "[6.0.13, )"
@@ -214,6 +238,14 @@
             "Dapper": {
               "target": "Package",
               "version": "[2.0.123, )"
+            },
+            "Imgur.API": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",

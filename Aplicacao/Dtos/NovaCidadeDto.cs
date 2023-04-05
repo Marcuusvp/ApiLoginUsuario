@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,5 +10,7 @@ namespace Aplicacao.Dtos
     public class NovaCidadeDto
     {
         public string Nome { get; set; }
+        public string? ImagemUrl { get; set; }
+        public IFormFile? Imagem { get; set; }
     }
 }

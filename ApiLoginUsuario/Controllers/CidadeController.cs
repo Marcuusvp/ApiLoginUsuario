@@ -19,9 +19,22 @@ namespace ApiLoginUsuario.Controllers
         [Authorize(Roles = "ATENDENTE")]
         [HttpPost]
         [Route("/cadastrar-cidade")]
-        public async Task<IActionResult> CreateNovaCidade([FromBody] NovaCidadeDto cidade)
+        public async Task<IActionResult> CreateNovaCidade([FromForm] NovaCidadeDto cidade)
         {
+            if (cidade.Imagem != null)
+            {
+                // Salve o arquivo temporariamente e obtenha o caminho local
+                var tempPath = Path.GetTempFileName();
+                using (var fileStream = System.IO.File.Create(tempPath))
+                {
+                    await cidade.Imagem.CopyToAsync(fileStream);
+                }
+
+                // Atualize a ImagemUrl no DTO
+                cidade.ImagemUrl = tempPath;
+            }
             var resultado = await _cidadeService.CreateCidade(cidade);
+
             return GerarRetorno(resultado);
         }
 
@@ -47,7 +60,7 @@ namespace ApiLoginUsuario.Controllers
         [Authorize(Roles = "ATENDENTE")]
         [HttpPut]
         [Route("/atualizar-cidade/{id}")]
-        public async Task<IActionResult> UpdatePessoa(int id, [FromBody]NovaCidadeDto cidade)
+        public async Task<IActionResult> UpdateCidade(int id, [FromForm] NovaCidadeDto cidade)
         {
             var resultado = await _cidadeService.AtualizarCidade(id, cidade);
             return GerarRetorno(resultado);

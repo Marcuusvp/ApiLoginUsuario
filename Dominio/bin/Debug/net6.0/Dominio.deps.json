@@ -8,12 +8,37 @@
     ".NETCoreApp,Version=v6.0": {
       "Dominio/1.0.0": {
         "dependencies": {
+          "Imgur.API": "5.0.0",
+          "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.Extensions.Configuration.KeyPerFile": "6.0.13",
           "Microsoft.Extensions.Configuration.UserSecrets": "6.0.1",
           "Npgsql": "7.0.2"
         },
         "runtime": {
           "Dominio.dll": {}
+        }
+      },
+      "Imgur.API/5.0.0": {
+        "dependencies": {
+          "System.Text.Json": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Imgur.API.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/5.0.17": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "6.0.0",
+          "System.IO.Pipelines": "5.0.2"
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.1722.21507"
+          }
         }
       },
       "Microsoft.Extensions.Configuration/6.0.1": {
@@ -158,6 +183,14 @@
           }
         }
       },
+      "System.IO.Pipelines/5.0.2": {
+        "runtime": {
+          "lib/netcoreapp3.0/System.IO.Pipelines.dll": {
+            "assemblyVersion": "5.0.0.1",
+            "fileVersion": "5.0.1522.11506"
+          }
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "System.Text.Encodings.Web/6.0.0": {
         "dependencies": {
@@ -177,6 +210,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Imgur.API/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Iso2lol4tCvSQjyJ7PVVKyPb6k6FPf4ajRb0c6qUPTUV20nT5j9tyxHvHSiSU1uhRON4dZCK9VlfMtwumDQCOw==",
+      "path": "imgur.api/5.0.0",
+      "hashPath": "imgur.api.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Features/5.0.17": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3jG2xS+dx8DDCGV/F+STdPTg89lX3ao3dF/VEPvJaz3wzBIjuadipTtYNEXDIVuOPZwb6jdmhrX9jkzOIBm5cw==",
+      "path": "microsoft.aspnetcore.http.features/5.0.17",
+      "hashPath": "microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/6.0.1": {
       "type": "package",
@@ -261,6 +308,13 @@
       "sha512": "sha512-/k12hfmg4PI0IU2UTLN6n0s/FKUfox8+RdWtzgADYZoyks7GH82WLyXm27eeqatsi/nmiK9lO3HyULlTD87szg==",
       "path": "npgsql/7.0.2",
       "hashPath": "npgsql.7.0.2.nupkg.sha512"
+    },
+    "System.IO.Pipelines/5.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Iew+dfa6FFiyvWBdRmXApixRY1db+beyutpIck4SOSe0NLM8FD/7AD54MscqVLhvfSMLHO7KadjTRT7fqxOGTA==",
+      "path": "system.io.pipelines/5.0.2",
+      "hashPath": "system.io.pipelines.5.0.2.nupkg.sha512"
     },
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
       "type": "package",

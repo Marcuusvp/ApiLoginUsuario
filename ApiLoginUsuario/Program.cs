@@ -17,6 +17,14 @@ builder.Configuration.AddUserSecrets<Program>();
 builder.Configuration.AddKeyPerFile(directoryPath: "/run/secrets", optional: true);
 builder.Services.AddControllers();
 builder.Services.AddSingleton<ConexaoBanco>();
+builder.Services.AddHttpClient();
+builder.Services.AddSingleton<IImagemService>(x =>
+{
+    var clientId = builder.Configuration["Secrets:ClientId"];
+    var httpClientFactory = x.GetRequiredService<IHttpClientFactory>();
+    var httpClient = httpClientFactory.CreateClient();
+    return new ImagemService(clientId, httpClient);
+});
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.Configure<ApiBehaviorOptions>(options => { options.SuppressModelStateInvalidFilter = true; });
 builder.Services.AddCors(options =>

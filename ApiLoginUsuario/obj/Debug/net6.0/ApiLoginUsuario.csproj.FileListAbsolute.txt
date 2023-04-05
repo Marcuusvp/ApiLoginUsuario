@@ -53,3 +53,12 @@ C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\obj\Debug\net6.0\ApiLoginUsuario.
 C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\obj\Debug\net6.0\ApiLoginUsuario.genruntimeconfig.cache
 C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\obj\Debug\net6.0\ref\ApiLoginUsuario.dll
 C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\bin\Debug\net6.0\Npgsql.dll
+C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\bin\Debug\net6.0\Imgur.API.dll
+C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\bin\Debug\net6.0\Microsoft.Extensions.Http.dll
+C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\repos\ApiLoginUsuario\ApiLoginUsuario\bin\Debug\net6.0\Newtonsoft.Json.dll

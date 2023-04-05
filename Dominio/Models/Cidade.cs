@@ -10,5 +10,6 @@ namespace Dominio.Models
     {
         public int Id { get; set; }
         public string Nome { get; set; }
+        public string? ImagemUrl { get; set; }
     }
 }

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "/RO0cQvcmEC2N7zbAeQnASPsIJE0DBJ8L8NfD9WBFBC7xnLqY6fZxPZdGLZC/9cyhSk43F3glBH2b6nI6ZMGcw==",
+  "dgSpecHash": "HlTzI5yjy1QiFoukSqxDZdmQpFZxIJNEbKZoocVkc+GOXuXZbRmyibX6O4eqab9LEDfAinXf9l4I0HoNSEqNBA==",
   "success": true,
   "projectFilePath": "C:\\Users\\repos\\ApiLoginUsuario\\Dominio\\Dominio.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Marcus\\.nuget\\packages\\imgur.api\\5.0.0\\imgur.api.5.0.0.nupkg.sha512",
+    "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.1\\microsoft.extensions.configuration.6.0.1.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\6.0.0\\microsoft.extensions.configuration.fileextensions.6.0.0.nupkg.sha512",
@@ -16,6 +18,7 @@
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\npgsql\\7.0.2\\npgsql.7.0.2.nupkg.sha512",
+    "C:\\Users\\Marcus\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
